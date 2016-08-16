@@ -1,5 +1,6 @@
 #updater                  var/www/nextcloud
 *.php                    var/www/nextcloud
+.user.ini                var/www/nextcloud
 3rdparty                 var/www/nextcloud
 AUTHORS                  var/www/nextcloud
 COPYING-AGPL             var/www/nextcloud
@@ -7,6 +8,7 @@ apps                     var/www/nextcloud
 config                   var/www/nextcloud
 core                     var/www/nextcloud
 db_structure.xml         var/www/nextcloud
+debian/config/apache/nextcloud.conf etc/apache2/conf-available/
 index.html               var/www/nextcloud
 l10n                     var/www/nextcloud
 lib                      var/www/nextcloud
@@ -17,6 +19,3 @@ resources                var/www/nextcloud
 robots.txt               var/www/nextcloud
 settings                 var/www/nextcloud
 themes                   var/www/nextcloud
-.user.ini                var/www/nextcloud
-
-debian/config/apache/nextcloud.conf etc/apache2/conf-available/
