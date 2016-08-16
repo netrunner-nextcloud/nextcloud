@@ -1,0 +1,20 @@
+Source: nextcloud
+Section: unknown
+Priority: optional
+Maintainer: Rohan Garg <rohan@kde.org>
+Build-Depends: debhelper (>=9), dh-systemd
+Standards-Version: 3.9.8
+Homepage: <insert the upstream URL, if relevant>
+
+Package: nextcloud
+Architecture: all
+Depends: apache2,
+         mysql-server,
+         php5,
+         php5-curl,
+         php5-gd,
+         php5-json,
+         php5-mysql,
+         ${misc:Depends}
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>

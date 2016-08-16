@@ -1,0 +1,27 @@
+#!/bin/sh
+## ----------------------------------------------------------------------
+## debian/postinst: postinstallation script for nextcloud
+## ----------------------------------------------------------------------
+
+## ----------------------------------------------------------------------
+## Abort if any command returns an error value
+set -e
+
+if [ "$1" = configure ] ; then
+    # only enable on new installs, not on upgrades
+    if [ -z "$2" ] ; then
+        a2enconf -q nextcloud
+    fi
+    # only restart if mod_something is enabled
+    if [ -e /etc/apache2/conf-enabled/nextcloud.conf ] ; then
+        invoke-rc.d apache2 reload
+    fi
+fi
+
+## ----------------------------------------------------------------------
+## Automatically added sections
+#DEBHELPER#
+
+exit 0
+
+## ----------------------------------------------------------------------

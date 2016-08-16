@@ -1,0 +1,21 @@
+#!/bin/sh
+## ----------------------------------------------------------------------
+## debian/postinst: postinstallation script for nextcloud
+## ----------------------------------------------------------------------
+
+## ----------------------------------------------------------------------
+## Abort if any command returns an error value
+set -e
+
+if [ "$1" = remove ] ; then
+    a2disconf -q -f nextcloud || true
+    invoke-rc.d apache2 reload
+fi
+
+## ----------------------------------------------------------------------
+## Automatically added sections
+#DEBHELPER#
+
+exit 0
+
+## ----------------------------------------------------------------------

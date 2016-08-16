@@ -1,0 +1,6 @@
+[Unit]
+Description=Nextcloud service
+Wants=mysql.service apache2.service
+
+[Install]
+WantedBy=multi-user.target

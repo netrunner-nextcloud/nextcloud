@@ -1,0 +1,7 @@
+#!/usr/bin/make -f
+%:
+	dh $@ --with systemd
+
+override_dh_fixperms:
+	dh_fixperms
+	chown -R www-data:www-data debian/nextcloud/var/www/nextcloud
