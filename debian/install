@@ -1,6 +1,7 @@
 #updater                  var/www/nextcloud
 *.php                    var/www/nextcloud
 .user.ini                var/www/nextcloud
+.htaccess                var/www/nextcloud
 3rdparty                 var/www/nextcloud
 AUTHORS                  var/www/nextcloud
 COPYING-AGPL             var/www/nextcloud
